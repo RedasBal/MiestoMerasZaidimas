@@ -37,10 +37,9 @@ public class Player{
 
             int random = new Random().nextInt(100);
             if (random < 30) {
-                Event event = eventRandom();
+                Event event = eventRandom(city);
                 DisplayInstrucions.showEvent(event);
                 event.apply(city);
-                city.applyDecision(decision);
             }
             if(city.getHappiness()<=30|| city.getSafety()<=30 ){
                 DisplayInstrucions.allert();

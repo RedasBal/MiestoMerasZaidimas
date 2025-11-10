@@ -2,7 +2,7 @@ package com.example.miestomeraszaidimas;
 
 import java.util.Random;
 public class RandomEvent {
-    public static Event eventRandom() {
+    public static Event eventRandom(City city) {
         Random random = new Random();
         int id = random.nextInt(5);
 
@@ -14,6 +14,7 @@ public class RandomEvent {
             case 4 -> new Event("Europos parlamento apsilankymas",+10,+200,+25,+15,0);
             default -> new Event("Rami diena 🌤️", 0, 0, 0, 0, 0);
         };
+        //city.applyDecision(decision);
     }
 }
 
